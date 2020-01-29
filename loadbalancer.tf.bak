@@ -1,0 +1,7 @@
+resource "openstack_lb_loadbalancer_v2" "lb_1" {
+  vip_subnet_id     = "b2c16fa1-d6f3-465e-b266-ee5cabd36f00"
+  name              = "terra-lb"
+  description       = "Load balanced from terraform"
+  security_group_ids = [openstack_networking_secgroup_v2.secgroup_1.id]
+}
+
